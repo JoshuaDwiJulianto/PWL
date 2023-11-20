@@ -62,7 +62,8 @@ Route::prefix('lecturer')
     ->name('lecturer.')
     ->group(function() {
         Route::get('/', [LecturerController::class, 'index'])->name('index');
-        Route::get('/', [LecturerController::class, 'create'])->name('create');
+        Route::get('/create', [LecturerController::class, 'create'])->name('create');
+        Route::post('/store', [LecturerController::class, 'store'])->name('store');
 });
 Route::prefix('student')
     ->name('student.')

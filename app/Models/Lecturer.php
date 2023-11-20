@@ -10,4 +10,10 @@ class Lecturer extends Model
     use HasFactory;
 
     protected $primarykey = 'nidn';
+
+    protected $fillable =[
+        'nidn',
+        'nama',
+        'department_id'
+    ];
 }
